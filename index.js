@@ -131,10 +131,13 @@ Person.prototype.toString = function(){
   /* 
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
-    1. Window/Global object binding: 
-    2. Implicit Binding:
-    3. New binding:
-    4. Explicit binding:
+    1. Window/Global object binding: If none of the other rules apply 'this' defaults to the window, global object in node or undefined in strict mode. - This happens when we do not give 'this' keyword any context. 
+    2. Implicit Binding: The Implicit binding occurs when dot notation is used to invoke a function, and only applies to objects with methods. Whenever a fuction is called by a preceding dot, the object left of the dot get 'this'.
+    3. New binding: Whenever a constructor function is used, 'this' refers to the specific instance of the object that is created and returned by the constructor function.
+    4. Explicit binding: Whenever JavaScript's call or apply method is used, 'this' is explicitky defined.
+    - call - immediately invokes the function, we pass in arguments one by one.
+    - apply - immediately invokes the function, we pass in arguments as an array.
+    - bind - Does not immediately invoke the function, instead it returns brand-new function that can be invoked later, we pass in arguments one by one.
   */
   
   
